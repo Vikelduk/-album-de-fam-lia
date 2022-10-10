@@ -78,7 +78,7 @@
             <h3> Mostrando a professora o que eu sei sobre o "Array"</h4>
          </span>
 
-         <img src="familia_animado.jpg"style="width = 30%;" id="foto_familia_imagem">
+         <img src="familia_animado.jpg" style="width : 30%;" id="foto_familia_imagem">
 
          <h4 id="nome_texto_familia">Clique no botão abaixo para ver os membros da família Klein!</h4>
 
@@ -86,17 +86,16 @@
 
         <script>
 
-            var img = ["familia_animado.jpg", "homem_animado.jpg", "mulher_animado.jpg", "menina_crianca_animado", "menino_crianca_animado"];
+            img = ["familia_animado.jpg", "homem_animado.jpg", "mulher_animado.jpg", "menina_crianca_animado", "menino_crianca_animado"];
             
-             var nome_familia = ["familia", "Kelly", "Diego", "Vitor", "Maitê"];
+            nome_familia = ["familia", "Kelly", "Diego", "Vitor", "Maitê"];
              console.log (nome_familia);
 
              var i = 0;
 
              function update()
              {
-                i++;
-                var quant_membros_familia = 4;
+                var quant_membros_familia = nome_familia.length;
 
                 if (i > quant_membros_familia)
                 {
@@ -104,10 +103,12 @@
                 }
 
                 var proxima_img = img[i];
-                var proximo_nome = nome_familia[0];
+                var proximo_nome = nome_familia[i];
 
                 document.getElementById(foto_familia_imagem).src = proxima_img;
                 document.getElementById(nome_texto_familia).innerHTML = proximo_nome;
+
+                i++;
              }
 
         </script>
